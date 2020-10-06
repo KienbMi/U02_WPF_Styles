@@ -1,0 +1,44 @@
+﻿<Window x:Class="Styles.WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Styles.WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--
+    <Window.Resources>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type CheckBox}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=IsChecked}" Value="True">
+                    <Setter Property="Foreground" Value="Green"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources> -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Content="Aufgabe 1:"></Label>
+        <TextBlock Style="{StaticResource ResourceKey=Unit1}" Grid.Row="2">Hier sollte ein sinnvoller Text stehen</TextBlock>
+        <Separator Grid.Row="3"></Separator>
+        <Label Grid.Row="4" Content="Aufgabe 2:"></Label>
+        <StackPanel Grid.Row="5">
+            <CheckBox x:Name="cbUnit2"></CheckBox>
+            <TextBlock Style="{StaticResource ResourceKey=Unit2}"></TextBlock>
+        </StackPanel>
+        <Separator Grid.Row="6"></Separator>
+        <Label Grid.Row="7" Content="Aufgabe 3:"></Label>
+        <TextBlock Style="{StaticResource ResourceKey=Unit3}"  Grid.Row="8">Hier sollte ein sinnvoller Text stehen</TextBlock>
+    </Grid>
+</Window>
